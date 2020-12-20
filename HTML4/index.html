@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Nattha Siriboon</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+    $( function() {
+      $( "#datepicker" ).datepicker()
+    });
+    </script>
+
+</head>
+<body>
+
+<table width="1000" height="100">
+    <tr>
+        <th>
+            <img src="work.png" width="150" alt="Bag">
+        </th> 
+        <th style="text-align:left">
+            <h1> Job Application by Nattha Siriboon (60011240)
+            </h1>
+            <p> Please complete the form below to apply for a position with us </p>
+        </th>
+    </tr>
+</table>
+
+<br><table width="650" height="400">
+    <tr> 
+        <td width="220px">
+            <p style="font-size:18px; float: left;">Full name</p>
+            <pre style="color:red;"> *</pre>
+        </td> 
+        <td><br><input type="text" size=30><br>Firstname</td>
+        <td><br><input type="text" size=30><br>Lastname</td>
+    </tr>
+    <tr> 
+        <td width="220px">
+            <p style="font-size:18px; float: left;">Current Address</p>
+            <pre style="color:red;"> *</pre>
+        </td>
+        <td colspan="2"><br><input type="text" size=62><br>Street Address</td>
+    </tr>
+    <tr> 
+        <td width="220px"></td>
+        <td colspan="2"><br><input type="text" size=62><br>Street Address Line 2</td>
+    </tr>
+    <tr> 
+        <td width="220px"></td>
+        <td><br><input type="text" size=30><br>City</td>
+        <td><br><input type="text" size=30><br>State/Province</td>
+    </tr>
+    <tr> 
+        <td width="220px"></td>
+        <td><br><input type="text" size=30><br>Postal/Zip Code</td>
+        <td><br>
+            <select form="Country" style="width: 220px;">
+                <option value="America">America</option>
+                <option value="China">China</option>
+                <option value="Indonesia">Indonesia</option>
+                <option value="Thailand">Thailand</option>
+                <option value="Others">Others</option>
+            </select>
+            <br>Country</td>
+        </td>
+    </tr>
+    <tr> 
+        <td width="220px">
+            <p style="font-size:18px; float: left;">Email Address</p>
+            <pre style="color:red;"> *</pre>
+        </td>
+        <td colspan="2"><input type="text" placeholder="ex: name@mail.com" size=62></td>
+    </tr>
+    <tr> 
+        <td width="220px">
+            <p style="font-size:18px; float: left;">Phone Number</p>
+            <pre style="color:red;"> *</pre>
+        </td>
+        <td><br><input type="text" size=30><br>Area Code</td>
+        <td><br><input type="text" size=30><br>Phone Number</td>
+    </tr>
+    <tr> 
+        <td width="220px">
+            <p style="font-size:18px; float: left;">Applying for Position</p>
+            <pre style="color:red;"> *</pre>
+        </td>
+        <td colspan="2">
+            <select form="Position" style="width: 443px;">
+                <option value="Manager">Manager</option>
+                <option value="Acountant">Acountant</option>
+                <option value="Programmer">Programmer</option>
+                <option value="Advisor">Advisor</option>
+                <option value="Others">Others</option>
+            </select>
+        </td>
+    </tr>
+
+</table>
+
+<table width="650" height="10">
+    <tr> 
+        <td width="220px">
+            <p style="font-size:18px; float: left;">Start Date</p>
+        </td>
+        <td>
+            <p><input type="text" id="datepicker" size="62"></p>
+        </td>
+    </tr>
+    <tr> 
+        <td width="220px">
+            <p style="font-size:18px; float: left;">Upload Resume</p>
+            <pre style="color:red;"> *</pre>
+        </td>
+        <td ><input type="file"> </td>
+    </tr>
+</table>
+
+    
+</body>
+</html>
