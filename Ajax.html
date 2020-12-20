@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nattha Siriboon 60011240</title>
+
+  <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js" 
+  ></script>
+  <script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+  <style>
+    #searchbox{
+        width: 100%;
+        
+        margin:auto;
+    }
+
+    .page{
+      width: 80%;
+      height: 100%;
+  
+      border: 1px solid black;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid black;
+    }
+
+</style>
+    
+</head>
+<div class="page">
+  <div id="searchbox">
+    <input id="search" type="text" style="margin:auto;">
+    <button onclick="search_click()">Search</button>
+  </div>
+  
+</div>
+
+<div class="container" id="result">
+      
+</div>
+
+    <script>
+
+
+function search_click() {
+  var searchh = $("#search").val()
+  $.ajax({
+    url: "https://www.googleapis.com/books/v1/volumes?q=title:" + searchh,
+    type: "GET",
+    cache: false,
+    success: function(json) {
+        console.log(json)
+              for(var i=0; i<json.items.length; i++){
+                  console.log("in")
+        html_str = '<div>' 
+                    + '<h1>'+json.items[i].volumeInfo.title+'</h1>'+
+                    '<h2>'+json.items[i].volumeInfo.authors+'</h2>'
+                    +'<h2>'+json.items[i].volumeInfo.industryIdentifiers[0].identifier+'</h2>'
+                    +'<h2>'+json.items[i].saleInfo.retailPrice.amount+'</h2>'
+                    +'<img src='+json.items[i].volumeInfo.imageLinks.thumbnail+'/>'
+                  +'</div>'
+        console.log(html_str);
+        $('#result').append(html_str);
+      }
+    }
+  });
+}
+
+</script>
+
+</body>
+</html>
